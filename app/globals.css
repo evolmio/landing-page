@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Evolmio Color Palette from Logo */
+:root {
+  --color-evolmio-teal: #20b2a6;
+  --color-evolmio-cyan: #4ec5d9;
+  --color-evolmio-blue: #3b5bdb;
+  --color-evolmio-purple: #7c3aed;
+  --color-evolmio-pink: #ec4899;
+  --color-evolmio-green: #9bdb3d;
+  --color-evolmio-orange: #f59e0b;
+
+  --gradient-evolmio: linear-gradient(135deg, #20b2a6 0%, #4ec5d9 25%, #3b5bdb 50%, #7c3aed 75%, #ec4899 100%);
+  --gradient-evolmio-soft: linear-gradient(135deg, rgba(32, 178, 166, 0.1) 0%, rgba(78, 197, 217, 0.1) 25%, rgba(59, 91, 219, 0.1) 50%, rgba(124, 58, 237, 0.1) 75%, rgba(236, 72, 153, 0.1) 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Styles */
+@layer components {
+  .hero-section {
+    @apply relative overflow-hidden;
+    background: var(--gradient-evolmio-soft);
+    background-attachment: fixed;
+  }
+
+  .hero-headline {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 text-center;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subheading {
+    @apply text-lg sm:text-xl text-gray-700 text-center max-w-2xl mx-auto;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .cta-button {
+    @apply px-8 py-4 rounded-full font-semibold transition-all duration-300;
+    background: var(--gradient-evolmio);
+    color: white;
+    box-shadow: 0 4px 20px rgba(32, 178, 166, 0.3);
+    border: none;
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(32, 178, 166, 0.4);
+  }
+
+  .cta-button:active {
+    transform: translateY(0);
+  }
+
+  .cta-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .about-section {
+    @apply bg-white;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+
+  .section-description {
+    @apply text-lg text-gray-700 leading-relaxed max-w-3xl;
+    margin-bottom: 3rem;
+  }
+
+  .features-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8;
+  }
+
+  .feature-card {
+    @apply p-6 sm:p-8 rounded-2xl;
+    background: var(--gradient-evolmio-soft);
+    border: 1px solid rgba(32, 178, 166, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(32, 178, 166, 0.4);
+    box-shadow: 0 8px 24px rgba(32, 178, 166, 0.1);
+  }
+
+  .feature-icon {
+    @apply text-4xl mb-4;
+  }
+
+  .feature-title {
+    @apply font-semibold text-gray-900;
+  }
+
+  .how-it-works-section {
+    @apply bg-gradient-to-br from-white to-gray-50;
+  }
+
+  .steps-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10;
+  }
+
+  .step-card {
+    @apply relative p-8 sm:p-10 rounded-2xl bg-white;
+    border: 2px solid rgba(32, 178, 166, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .step-card:hover {
+    border-color: var(--color-evolmio-teal);
+    box-shadow: 0 12px 40px rgba(32, 178, 166, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .step-number {
+    @apply text-5xl sm:text-6xl font-bold;
+    background: var(--gradient-evolmio);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    @apply text-xl sm:text-2xl font-bold text-gray-900 mb-3;
+  }
+
+  .step-description {
+    @apply text-gray-600 leading-relaxed;
+  }
+
+  .step-connector {
+    @apply hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 text-2xl;
+    color: var(--color-evolmio-teal);
+  }
+
+  .form-section {
+    @apply bg-gradient-to-br from-gray-50 to-white;
+  }
+
+  .form-container {
+    @apply bg-white p-8 sm:p-12 rounded-2xl;
+    border: 1px solid rgba(32, 178, 166, 0.2);
+    box-shadow: 0 8px 32px rgba(32, 178, 166, 0.08);
+  }
+
+  .form-group {
+    @apply mb-6;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-gray-900 mb-2;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900;
+    transition: all 0.3s ease;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-evolmio-teal);
+    box-shadow: 0 0 0 3px rgba(32, 178, 166, 0.1);
+  }
+
+  .form-input::placeholder {
+    @apply text-gray-400;
+  }
+
+  .success-message {
+    @apply mb-6 p-4 rounded-lg bg-green-50 text-green-800 border border-green-200;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .footer-section {
+    @apply bg-white border-t border-gray-200;
+  }
+}
