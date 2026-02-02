@@ -1,17 +1,19 @@
-import Navigation from "./components/Navigation";
-import Features from "./components/Features";
-import ImageShowcase from "./components/ImageShowcase";
-import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import HowItWorks from "./components/HowItWorks";
+import WaitingListForm from "./components/WaitingListForm";
+import EvolmioFooter from "./components/EvolmioFooter";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       <main>
-        <Features />
-        <ImageShowcase />
+        <Hero />
+        <About />
+        <HowItWorks />
+        <WaitingListForm />
       </main>
-      <Footer />
+      <EvolmioFooter />
     </div>
   );
 }
