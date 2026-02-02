@@ -13,8 +13,8 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         {/* Logo */}
         <div className="flex justify-center mb-8 sm:mb-12">
-          <img 
-            src="https://cdn.builder.io/api/v1/image/assets%2F7706d7fc25604e9d9f86843c5eb42f2f%2F2d0358062af64fa5bc49ef0174a95a54?format=webp&width=800&height=1200"
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F7706d7fc25604e9d9f86843c5eb42f2f%2F3081d9763f644a58a472f515478cfaba?format=webp&width=800&height=1200"
             alt="Evolmio Logo"
             className="h-40 sm:h-48 w-auto"
           />
