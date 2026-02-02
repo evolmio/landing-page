@@ -12,11 +12,11 @@ export default function Hero() {
     <section className="hero-section">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         {/* Logo */}
-        <div className="flex justify-center mb-8 sm:mb-12">
+        <div className="flex justify-center mb-12 sm:mb-16">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F7706d7fc25604e9d9f86843c5eb42f2f%2F3081d9763f644a58a472f515478cfaba?format=webp&width=800&height=1200"
+            src="https://cdn.builder.io/api/v1/image/assets%2F7706d7fc25604e9d9f86843c5eb42f2f%2F78c480ac0e2e407883d94eba93585948?format=webp&width=800&height=1200"
             alt="Evolmio Logo"
-            className="h-40 sm:h-48 w-auto"
+            className="h-48 sm:h-56 md:h-64 w-auto"
           />
         </div>
 
