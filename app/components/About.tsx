@@ -1,19 +1,19 @@
 export default function About() {
   const features = [
-    { icon: '🎮', title: 'Behaviour-based, not grades' },
-    { icon: '💪', title: 'Built for confidence and self-belief' },
-    { icon: '🗺️', title: 'Designed for real-world pathways' }
+    { icon: '🎮', title: 'Focus on Who You Are, Not What You Score' },
+    { icon: '💪', title: 'Build Genuine Confidence' },
+    { icon: '🗺️', title: 'Explore Pathways That Truly Fit' }
   ];
 
   return (
     <section className="about-section">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         {/* Section Header */}
-        <h2 className="section-title">What is Evolmio?</h2>
+        <h2 className="section-title">Go Beyond Grades. Discover Yourself.</h2>
 
         {/* Main Description */}
         <p className="section-description">
-          Evolmio is a game-based, behaviour-led career discovery app that helps learners build clarity, confidence, and direction. Instead of tests or labels, Evolmio uses interactive challenges and reflection to turn everyday behaviours into real skills — helping people explore pathways that actually fit them.
+          Tired of being defined by tests and labels? Evolmio is a revolutionary app that transforms self-discovery into an exciting adventure. Through fun, game-based challenges and guided reflection, we help you uncover your natural skills and passions. We translate your everyday behaviours into a clear picture of your strengths, building the confidence you need to explore career and life pathways that genuinely excite you.
         </p>
 
         {/* Features Grid */}

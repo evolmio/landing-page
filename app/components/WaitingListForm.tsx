@@ -10,6 +10,7 @@ export default function WaitingListForm() {
   });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -22,18 +23,27 @@ export default function WaitingListForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
 
     try {
-      // Simulate form submission
-      // In production, you would send this to your backend or Reslink
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSubmitted(true);
-      setFormData({ name: '', email: '', userType: '' });
-      
-      // Reset after 5 seconds
-      setTimeout(() => setSubmitted(false), 5000);
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', userType: '' });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        const data = await response.json();
+        setError((data.error || 'Something went wrong.') + ' Please try again. If the issue persists, please email enquiries@skillstruct.com.');
+      }
     } catch (error) {
+      setError('An unexpected error occurred. Please try again. If the issue persists, please email enquiries@skillstruct.com.');
       console.error('Form submission error:', error);
     } finally {
       setLoading(false);
@@ -43,19 +53,22 @@ export default function WaitingListForm() {
   return (
     <section id="waiting-list-form" className="form-section">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
-        {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="section-title text-center">Be the first to try Evolmio</h2>
           <p className="section-description text-center">
-            We're launching soon. Join the waiting list for early access.
+            We&apos;re launching soon. Join the waiting list for early access.
           </p>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="form-container">
           {submitted && (
             <div className="success-message">
-              ✓ Thanks for joining! Check your email for updates.
+              Email sent successfully! Thanks for joining! We&apos;ll be in touch soon.
+            </div>
+          )}
+          {error && (
+            <div className="error-message">
+              {error}
             </div>
           )}
 
@@ -93,7 +106,7 @@ export default function WaitingListForm() {
 
           <div className="form-group">
             <label htmlFor="userType" className="form-label">
-              I'm a... (Optional)
+              I&apos;m a... (Optional)
             </label>
             <select
               id="userType"

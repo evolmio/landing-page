@@ -12,26 +12,6 @@ export default function EvolmioFooter() {
               Built to help people grow
             </p>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Connect</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Twitter</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Instagram</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">LinkedIn</a></li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom */}

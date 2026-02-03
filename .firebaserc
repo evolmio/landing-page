@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "evolmio-web-app",
+    "producation": "evolmio-web-app"
+  },
+  "targets": {},
+  "etags": {}
+}
