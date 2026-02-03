@@ -11,7 +11,7 @@ export default function Evolution() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl dark:text-white">
-            From SkillStruct to Evolmio
+             Evolmio powered by Skillstruct
           </h2>
           <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
             Built from real-world experience. Designed for what learners actually need.
@@ -23,13 +23,13 @@ export default function Evolution() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">The Journey</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Evolmio didn’t start as an app. It started with <strong>SkillStruct</strong> — a programme delivered in classrooms, community spaces, and employability settings across the UK.
+                Evolmio didn’t start as an app. It started with <strong>SkillStruct</strong> a programme delivered in classrooms, community spaces, and employability settings across the UK.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
                 Across every session, the same story emerged. Learners felt uncertain about their strengths, unsure where they fit, and disconnected from traditional careers tools.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                Evolmio is the evolution of that work — transforming real-world insight into a game-based, behaviour-led experience that helps people discover who they are and where they can go.
+                Evolmio is the evolution of that work transforming real-world insight into a game-based, behaviour-led experience that helps people discover who they are and where they can go.
               </p>
             </div>
             
